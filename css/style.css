@@ -1,7 +1,11 @@
+body {
+    margin: 0px;
+}
 
-p{
+p {
     font-family: 'Fira Code', monospace;
-    letter-spacing: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 span{
@@ -13,33 +17,72 @@ body{
 }
 
 header{
-    display: grid;
-    grid-template-columns: 6fr 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
     background-color: #FFF3E9;
 }
 
+@keyframes animationleft {
+    0% {opacity: 0}
+    0% {margin-left: -30rem}
+    100% {opacity: 1}
+    100% {margin-left: 0rem}
+}
+
 h1{
-    font-family: 'Arimo', sans-serif;
-    font-weight: bold;
-    font-size: 5rem;
+    animation: animationleft 1.5s;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+    /* text-shadow: 1px 0px black, -1px 0px black; */
+    letter-spacing: -3px;
+    font-size: 3rem;
+    padding-top: 4rem;
+    margin-bottom: 0.7rem;
+}
+
+.line {
+    background-color: rgb(179, 179, 179);
+    height: 1px;
+    width: 210px;
 }
 
 h3{
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: normal;
-    font-size: 0.8rem; 
+    font-size: 0.6rem; 
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.5rem;
+}
+
+.info h3 {
+    margin-right: 0.7rem;
 }
 
 /* NAVIGATION */
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
+    justify-content: space-around;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 ul{ 
+    margin: 1rem;
     list-style-type: none; 
+}
+
+a{
+    padding: 1.1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;     
 }
 
 a:link {
@@ -54,8 +97,10 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-    color: white;
-    background-color: #000852;
+    transition-duration: 1.5s;
+    color: rgb(230, 227, 227);
+    background-color: #000e8b;
+    border-radius: 10px;
 }
 
 /* selected link */
@@ -63,13 +108,239 @@ a:active {
     color: white;
     background-color: #000852;
 }
+
+.current {
+    color: rgb(230, 227, 227);
+    background-color: #000852;
+    border-radius: 10px;
+}
 /* NAVIGATION */
 
 /* MAIN */
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes animationright {
+    0% {margin-right: -30rem}
+    0% {opacity: 0}
+    20% {margin-right: -5rem}
+    50% {opacity: 0.3}
+    100% {opacity: 1}
+    100% {margin-right: 0rem}
+}
+
+.div-vertical {
+    animation: animationright 1.6s;
+    position: sticky;
+    top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.p-vertical {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: rgb(165, 0, 0);
+    transform: rotate(90deg);
+    margin-top: 2rem;
+    margin-right: .5rem;
+    margin-bottom: 3rem;
+    text-shadow: 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white;
+    order: 1;
+}
+
+/* .circle {
+    width: 40%;
+    position: absolute;
+    top: 40%;
+} */
+
+.marie {
+    width: 100%;
+    height: auto;
+    order: 2;
+}
+
+.sixteen {
+    width: 100%;
+    height: auto;
+    order: 2;
+}
+
+.decoration {
+    width: 100%;
+    height: auto;
+    order: 2;
+}
+
+.decoration2 {
+    width: 100%;
+    height: auto;
+    order: 3;
+}
+
+.p-head {
+    padding-top: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0px;
+    order: 3;
+}
+
+.p-first {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 4rem;
+    margin: 0px;
+    order: 3;
+}
+
+
+
 /* MAIN */
 
 /* FOOTER */
 footer{
     background-color: #FFF3E9;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+footer .info {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+}
+
+.info h3 {
+    margin-right: 0.7rem;
 }
 /* FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP-VARIANT!!! */
+@media only screen and (min-width: 600px) {
+
+    p{
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9rem;
+        letter-spacing: 1.6;
+    }
+
+    span{
+        font-weight: bold;
+    }
+
+    body{
+        background-color: white;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 6fr 5px 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: #FFF3E9;
+    }
+
+    h1{
+        display: flex;
+        align-items: flex-end;
+        font-family: 'Arimo', sans-serif;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+
+    h3{
+        font-family: 'Arimo', sans-serif;
+        font-weight: normal;
+        font-size: 0.8rem; 
+    }
+
+    header h3{
+        display: flex;
+        align-items: flex-end;
+        justify-self: space-evenly;
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    /* NAVIGATION */
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+    ul{ 
+        list-style-type: none; 
+    }
+
+    a{
+        font-family: 'Arimo', sans-serif;
+        font-weight: normal;
+        font-size: 1rem;     
+    }
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* visited link */
+    a:visited {
+        color: black;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: white;
+        background-color: #000852;
+    }
+
+    /* selected link */
+    a:active {
+        color: white;
+        background-color: #000852;
+    }
+    /* NAVIGATION */
+
+    /* MAIN */
+    article {
+        display: grid;
+        grid-template-columns: 3fr 3fr 5px 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .marie {
+        grid-column: 1;
+        width: 80%;
+    }
+
+    .p-right {
+        grid-column: 2;
+    }
+
+    /* MAIN */
+
+    /* FOOTER */
+    footer{
+        background-color: #FFF3E9;
+    }
+    /* FOOTER */
+}
