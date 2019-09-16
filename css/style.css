@@ -539,7 +539,7 @@ footer .line {
         width: 70%;
         height: auto;
         margin-bottom: 3rem;
-        padding-right: 
+        /* padding-right:  */
     }
 
     .decoration {
@@ -648,4 +648,4 @@ footer .line {
         width: 1px;
     }
     /* -----------------------------FOOTER----------------------------- */
-    
+}
