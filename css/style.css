@@ -21,8 +21,6 @@ body{
 /* ------------------------HEADER---------------------- */
 
 header{
-    padding-left: 2rem;
-    padding-right: 2rem;
     background-position: right;
     background-color: #FFF3E9;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='400' height='400' fill='rgb(255,243,233)'/><line x1='0' y1='0' x2='300' y2='300' style='stroke:rgb(255,0,0,0.5);stroke-width:40;'/><line x1='0' y1='200' x2='350' y2='0' style='stroke:rgb(255,0,0,0.5);stroke-width:20;'/></svg>") no-repeat;
@@ -47,14 +45,16 @@ h1{
     font-size: 3rem;
     font-size: 12vw;
     padding-top: 4rem;
+    padding-left: 2rem;
     margin-top: 0px;
     margin-bottom: 0.7rem;
 }
 
 .line {
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(190, 190, 190);
     height: 1px;
     width: 210px;
+    margin-left: 2rem;
 }
 
 h3{
@@ -66,6 +66,8 @@ h3{
 .info{
     display: flex;
     flex-direction: row;
+    padding-right: 2rem;
+    padding-left: 2rem;
     padding-bottom: 1.5rem;
 }
 
@@ -86,7 +88,7 @@ nav ul {
 
 ul { 
     display: flex;
-    margin: 1rem;
+    /* margin: 1rem; */
     list-style-type: none; 
 }
 
@@ -128,7 +130,6 @@ a:active {
 nav a.current {
     color: rgb(230, 227, 227);
     background-color: #000852;
-    /* border-radius: 10px; */
 }
 /* ----------------------NAVIGATION-------------------- */
 
@@ -155,13 +156,14 @@ article .line {
 
 .div-vertical {
     position: sticky;
-    top: 40px;
+    top: 60px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .p-vertical {
+    position: absolute;
     animation: animationright 1.6s;
     font-family: sans-serif;
     font-weight: bold;
@@ -189,12 +191,14 @@ article .line {
     width: 100%;
     height: auto;
     order: 2;
+    margin-top: 5rem;
 }
 
-.sixteen {
+.bruce {
     width: 100%;
     height: auto;
     order: 2;
+    margin-top: 5rem;
 }
 
 .vogue {
@@ -207,6 +211,7 @@ article .line {
     width: 100%;
     height: auto;
     order: 2;
+    margin-top: 5rem;
 }
 
 .decoration2 {
@@ -255,6 +260,7 @@ article .line {
     padding-right: 3rem;
     margin: 0px;
     margin-bottom: 2rem;
+    margin-top: 5rem;
     order: 3;
 }
 
@@ -334,8 +340,8 @@ footer .line {
     header{
         display: grid;
         grid-template-columns: 1fr 1px 20%;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
         background-position: right;
         background-color: #FFF3E9;
         background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='400' height='400' fill='rgb(255,243,233)'/><line x1='0' y1='0' x2='300' y2='300' style='stroke:rgb(255,0,0,0.5);stroke-width:40;'/><line x1='0' y1='200' x2='350' y2='0' style='stroke:rgb(255,0,0,0.5);stroke-width:20;'/></svg>") no-repeat;
@@ -368,9 +374,9 @@ footer .line {
         display: flex;
         align-self: center;
         grid-column: 2 / 2;
-        background-color: rgb(153, 153, 153);
         height: 70%;
         width: 1px;
+        margin-left: 0px;
     }
     
     h3{
@@ -454,11 +460,11 @@ footer .line {
     article {
         display: grid;
         grid-template-columns: 1fr 1fr 1px 20%;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 10px;
-        grid-row-gap: 20px;
-        align-content: stretch;
-        justify-items: center;
+        grid-template-rows: 1fr auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        /* align-content: stretch; */
+        /* justify-items: center; */
         margin: 0px;
         padding: 0px;
         padding-left: 4rem;
@@ -482,6 +488,7 @@ footer .line {
         height: 90%;
         width: 1px;
         margin-top: 2rem;
+        margin-left: 18px;
     }
 
     .div-vertical {
@@ -523,14 +530,19 @@ footer .line {
         height: auto;
         padding-left: 2rem;
         padding-top:  2rem;
+        margin-bottom: 3rem;
+        margin-top: 0rem;
+        justify-self: end;
     }
     
-    .sixteen {
+    .bruce {
         grid-column: 1 / 1;
         grid-row: 1 / 1;
         width: 70%;
         height: auto;
-        padding-top:  2rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        justify-self: end;
     }
     
     .vogue {
@@ -538,8 +550,7 @@ footer .line {
         grid-row: 2 / 3;
         width: 70%;
         height: auto;
-        margin-bottom: 3rem;
-        /* padding-right:  */
+        margin-bottom: 1rem;
     }
 
     .decoration {
@@ -547,8 +558,8 @@ footer .line {
         grid-row: 1 / 1;
         width: 80%;
         height: auto;
-        padding: 2rem;
-        margin-bottom: 4rem;
+        justify-self: end;
+        margin-top: 2rem;
     }
     
     .decoration2 {
@@ -564,6 +575,7 @@ footer .line {
         padding-top: 2rem;
         padding-bottom: 4rem;
         padding-right: 2rem;
+        padding-left: 0rem;
         margin: 0px;
     }
 
@@ -579,7 +591,10 @@ footer .line {
         grid-row: 1 / 1 ;
         padding-top: 2rem;
         padding-bottom: 4rem;
+        padding-left: 0rem;
+        padding-right: 2rem;
         margin: 0px;
+        justify-self: start;
     }
     
     .p-second {
@@ -588,6 +603,8 @@ footer .line {
         margin-bottom: 3rem;
         margin: 0px;
         padding-top: 0px;
+        padding-left: 2rem;
+        padding-right: 0rem;
         text-align: right;
     }
 
@@ -614,7 +631,7 @@ footer .line {
     /* -----------------------------FOOTER----------------------------- */
     footer{
         display: grid;
-        grid-template-columns: 80% 1px 20%;
+        grid-template-columns: 1fr 1px 20%;
         height: 110px;
         margin-top: 2rem;
         /* padding-bottom: 4rem; */
